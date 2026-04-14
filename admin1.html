@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel Administrativo - Catálogo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body class="admin-body">
+    <div class="painel-container">
+      <header class="painel-header">
+        <div class="painel-header-text">
+          <h1><span class="logo-icon">📦</span> Painel Administrativo</h1>
+          <p>Cadastre novos produtos no catálogo</p>
+        </div>
+        <div class="usuario-logado">
+          <p>Operador: <span id="nome-usuario">Carregando...</span></p>
+          <button onclick="sairDoSistema()" class="btn-sair">
+            Sair do Sistema
+          </button>
+        </div>
+      </header>
+
+      <main class="painel-formulario">
+        <form
+          id="form-produto"
+          onsubmit="event.preventDefault(); cadastrarProduto();"
+        >
+          <div class="form-grupo">
+            <label for="input-nome">Nome do Produto</label>
+            <input
+              type="text"
+              id="input-nome"
+              placeholder="Ex: Tênis Nike Air Max"
+              required
+            />
+            <div class="form-dica">Digite o nome completo do produto</div>
+          </div>
+
+          <div class="form-grupo">
+            <label for="input-preco">Preço (R$)</label>
+            <div class="input-com-icone">
+              <span class="icone-input">R$</span>
+              <input
+                type="number"
+                id="input-preco"
+                step="0.01"
+                min="0.01"
+                placeholder="199.90"
+                required
+              />
+            </div>
+            <div class="form-dica">Apenas números e ponto decimal</div>
+          </div>
+
+          <div class="form-grupo">
+            <label for="input-imagem">Caminho da Imagem</label>
+            <input
+              type="text"
+              id="input-imagem"
+              placeholder="Ex: img/tenis.png"
+            />
+            <div class="form-dica">
+              Caminho relativo da imagem na pasta 'img'
+            </div>
+          </div>
+
+          <div class="form-grupo">
+            <label for="input-categoria">Categoria</label>
+            <select id="input-categoria">
+              <option value="">Selecione...</option>
+              <option value="Eletrônicos">Eletrônicos</option>
+              <option value="Roupas">Roupas</option>
+              <option value="Calçados">Calçados</option>
+              <option value="Acessórios">Acessórios</option>
+              <option value="Casa">Casa</option>
+              <option value="Esportes">Esportes</option>
+              <option value="Beleza">Beleza</option>
+              <option value="Outros">Outros</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label for="input-descricao">Descrição (Opcional)</label>
+            <textarea
+              id="input-descricao"
+              rows="3"
+              placeholder="Descreva o produto..."
+            ></textarea>
+          </div>
+
+          <div class="form-acoes">
+            <button type="submit" class="botao-principal">
+              <span class="botao-icone">✓</span> Salvar no Banco
+            </button>
+            <button
+              type="button"
+              class="botao-secundario"
+              onclick="limparFormulario()"
+            >
+              <span class="botao-icone">↻</span> Limpar
+            </button>
+            <a href="index.html" class="link-voltar">← Voltar para a Vitrine</a>
+          </div>
+
+          <div id="mensagem-aviso" class="mensagem-status"></div>
+        </form>
+
+        <aside class="painel-coluna-lateral">
+          <div class="painel-info">
+            <h3><span class="info-icone">📋</span> Instruções</h3>
+            <ul>
+              <li>Preencha todos os campos obrigatórios</li>
+              <li>
+                Para imagens, primeiro envie o arquivo para a pasta
+                <code>img</code>
+              </li>
+              <li>O preço será formatado automaticamente na vitrine</li>
+              <li>
+                Após cadastrar, confira o produto na
+                <a href="index.html">vitrine principal</a>
+              </li>
+            </ul>
+
+            <div class="status-banco">
+              <h4><span class="status-icone">🌐</span> Conexão com Banco</h4>
+              <p id="status-conexao">Verificando conexão....</p>
+            </div>
+          </div>
+
+          <section class="gestao-produtos">
+            <div class="gestao-topo">
+              <h2>Gerenciar Produtos</h2>
+              <p><span id="total-produtos-admin">0</span> itens cadastrados</p>
+            </div>
+            <div id="lista-produtos-admin" class="lista-produtos-admin">
+              <p class="lista-carregando">Carregando produtos...</p>
+            </div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <footer class="painel-rodape">
+      <p>
+        Catálogo em Nuvem • Painel Administrativo • Desenvolvido com Supabase
+      </p>
+    </footer>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

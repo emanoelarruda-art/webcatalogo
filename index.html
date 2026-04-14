@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Produtos - Vitrine</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1>Catálogo em Nuvem</h1>
+      <p>Produtos carregados diretamente do Supabase em tempo real</p>
+      <div class="contador-produtos">
+        <span id="contador-produtos">0</span> produtos disponíveis
+      </div>
+    </header>
+
+    <div class="barra-controles">
+      <div class="controles-container">
+        <div class="busca-container">
+          <div class="busca-icone">🔍</div>
+          <input
+            type="text"
+            id="busca-produtos"
+            class="busca-input"
+            placeholder="Buscar produtos por nome ou categoria..."
+          />
+        </div>
+
+        <div class="filtro-categorias">
+          <button
+            class="botao-filtro ativo"
+            onclick="filtrarPorCategoria('todos')"
+          >
+            Todos
+          </button>
+          <button
+            class="botao-filtro"
+            onclick="filtrarPorCategoria('Eletrônicos')"
+          >
+            Eletrônicos
+          </button>
+          <button class="botao-filtro" onclick="filtrarPorCategoria('Roupas')">
+            Roupas
+          </button>
+          <button
+            class="botao-filtro"
+            onclick="filtrarPorCategoria('Calçados')"
+          >
+            Calçados
+          </button>
+          <button
+            class="botao-filtro"
+            onclick="filtrarPorCategoria('Acessórios')"
+          >
+            Acessórios
+          </button>
+        </div>
+
+        <a href="admin.html" class="link-admin">
+          <span class="botao-icone">⚙️</span> Área do Lojista
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <div id="vitrine" class="grid-produtos">
+        <!-- Os produtos serão inseridos aqui pelo JavaScript -->
+      </div>
+    </main>
+
+    <footer class="rodape">
+      <div class="rodape-conteudo">
+        <p>Catálogo em Nuvem • Desenvolvido com Supabase e JavaScript</p>
+        <div class="rodape-links">
+          <a href="admin.html">Painel Administrativo</a>
+          <a href="https://supabase.com" target="_blank"
+            >Documentação do Supabase</a
+          >
+          <a href="https://codesandbox.io" target="_blank">CodeSandbox</a>
+        </div>
+        <p>
+          &copy; <span id="ano-atual">2026</span> - Todos os direitos reservados
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

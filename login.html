@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Administrativo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body class="login-body">
+    <div class="login-container">
+      <div class="login-header">
+        <h2>Acesso Restrito</h2>
+        <p>Área do Lojista</p>
+      </div>
+
+      <form id="login-form" onsubmit="event.preventDefault(); fazerLogin();">
+        <div class="form-grupo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com" required />
+        </div>
+
+        <div class="senha-grupo">
+          <label for="password">Senha</label>
+          <div class="senha-wrapper">
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••••"
+              required
+            />
+            <button
+              type="button"
+              onclick="mostrarSenha()"
+              id="btn-olho"
+              class="btn-olho"
+            >
+              👁️
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" id="btn-entrar" class="btn-entrar">
+          Entrar no Painel
+        </button>
+      </form>
+
+      <p id="mensagem" class="mensagem"></p>
+
+      <div class="login-footer">
+        <a href="index.html">← Voltar para a Loja</a>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

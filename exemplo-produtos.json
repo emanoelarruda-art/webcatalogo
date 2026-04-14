@@ -1,0 +1,107 @@
+[
+  {
+    "nome": "Smartphone Galaxy S23",
+    "preco": 3499.9,
+    "imagem_url": "img/smartphone.jpg",
+    "categoria": "Eletrônicos",
+    "descricao": "Smartphone flagship com câmera de 200MP"
+  },
+  {
+    "nome": "Tênis Nike Air Max",
+    "preco": 599.9,
+    "imagem_url": "img/tenis.jpg",
+    "categoria": "Calçados",
+    "descricao": "Tênis esportivo com tecnologia Air Max"
+  },
+  {
+    "nome": "Camiseta Básica Algodão",
+    "preco": 49.9,
+    "imagem_url": "img/camiseta.jpg",
+    "categoria": "Roupas",
+    "descricao": "Camiseta 100% algodão, diversas cores"
+  },
+  {
+    "nome": "Fone Bluetooth Sony",
+    "preco": 399.9,
+    "imagem_url": "img/fone.jpg",
+    "categoria": "Eletrônicos",
+    "descricao": "Fone sem fio com cancelamento de ruído"
+  },
+  {
+    "nome": "Relógio Smartwatch",
+    "preco": 899.9,
+    "imagem_url": "img/smartwatch.jpg",
+    "categoria": "Acessórios",
+    "descricao": "Monitor de saúde e notificações"
+  },
+  {
+    "nome": "Mochila Notebook",
+    "preco": 159.9,
+    "imagem_url": "img/mochila.jpg",
+    "categoria": "Acessórios",
+    "descricao": "Mochila resistente para notebooks até 17\""
+  },
+  {
+    "nome": "Console PlayStation 5",
+    "preco": 3899.9,
+    "imagem_url": "img/ps5.jpg",
+    "categoria": "Eletrônicos",
+    "descricao": "Console de última geração com 825GB SSD"
+  },
+  {
+    "nome": "Kit Maquiagem Profissional",
+    "preco": 299.9,
+    "imagem_url": "img/maquiagem.jpg",
+    "categoria": "Beleza",
+    "descricao": ""
+  },
+  {
+    "nome": "Bicicleta Mountain Bike",
+    "preco": 1299.9,
+    "imagem_url": "img/bicicleta.jpg",
+    "categoria": "Esportes",
+    "descricao": "Bicicleta aro 29 com 21 marchas"
+  },
+  {
+    "nome": "Cafeteira Elétrica",
+    "preco": 189.9,
+    "imagem_url": "img/cafeteira.jpg",
+    "categoria": "Casa",
+    "descricao": "Cafeteira com timer digital"
+  },
+  {
+    "nome": "Perfume Importado",
+    "preco": 459.9,
+    "imagem_url": "img/perfume.jpg",
+    "categoria": "Beleza",
+    "descricao": "Fragrância exclusiva 100ml"
+  },
+  {
+    "nome": "Tablet Samsung",
+    "preco": 1499.9,
+    "imagem_url": "img/tablet.jpg",
+    "categoria": "Eletrônicos",
+    "descricao": "Tablet 10.4\" com caneta S-Pen"
+  },
+  {
+    "nome": "Jaqueta Corta Vento",
+    "preco": 199.9,
+    "imagem_url": "img/jaqueta.jpg",
+    "categoria": "Roupas",
+    "descricao": "Jaqueta impermeável para trilhas"
+  },
+  {
+    "nome": "Jogo de Panelas",
+    "preco": 349.9,
+    "imagem_url": "img/panelas.jpg",
+    "categoria": "Casa",
+    "descricao": "Conjunto com 7 peças antiaderentes"
+  },
+  {
+    "nome": "Bola de Futebol",
+    "preco": 89.9,
+    "imagem_url": "img/bola.jpg",
+    "categoria": "Esportes",
+    "descricao": "Bola oficial tamanho 5"
+  }
+]
